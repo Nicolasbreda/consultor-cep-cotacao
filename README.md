@@ -1,17 +1,18 @@
-# Consultor CEP e Cotação
+# Consultor de CEP e Cotação do Dólar
 
-Aplicação de terminal desenvolvida em Java que consome APIs REST públicas para consultar endereços a partir de um CEP (API ViaCEP) e a cotação do dólar do dia (API do Banco Central do Brasil).
+Aplicação de terminal desenvolvida em Java que consome APIs REST públicas para consultar endereços a partir de um CEP e a cotação do dólar em uma data específica.
 
 ## Funcionalidades
-- Consulta de endereço completo a partir de um CEP
-- Consulta da cotação atual do dólar
-- Tratamento de erros de conexão e dados inválidos
-- Parsing de respostas JSON sem bibliotecas externas
 
-## Tecnologias
-- Java 21
-- HttpClient (nativo do Java)
-- APIs REST (ViaCEP e Banco Central do Brasil)
+- Consulta de endereço completo a partir de um CEP (logradouro, bairro, cidade, UF)
+- Consulta da cotação de compra e venda do dólar em uma data informada
+- Tratamento de erros para CEP inválido e datas sem cotação disponível
+- Parsing de JSON com a biblioteca Gson
 
-## Objetivo
-Projeto desenvolvido para praticar consumo de APIs externas, tratamento de JSON e organização de código em camadas (model/service).
+## Tecnologias utilizadas
+
+- **Java 21**
+- **HttpClient** (nativo do Java, para consumo de APIs REST)
+- **Gson** (biblioteca do Google para parsing de JSON)
+- **API ViaCEP** — consulta de endereços
+- **API PTAX (Banco Central do Brasil)** — cotação do dólar
